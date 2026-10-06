@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>30 Day Plan: Water Buffalo</title>
+<style>
+:root{--navy:#0b1f36;--card:#12355b;--blue:#0f4c81;--gold:#c8a24a;--lgold:#e3c77f;--bg:#e9eff6;--white:#fff;--red:#b3261e;--green:#1f6f43;--text:#1b2a3a;--muted:#5a6b7d}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+h1,h2,h3{line-height:1.25}
+.num{color:var(--blue);font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+h2{font-size:30px;margin-bottom:16px}
+.lead{font-size:18px;color:var(--muted);max-width:760px;margin-bottom:32px}
+.hl{background:#f6ecd2;padding:0 4px;border-radius:3px;font-weight:600;color:var(--text)}
+b,strong{font-weight:700}
+.hero{background:var(--navy);color:#fff;border-bottom:6px solid var(--gold);padding:28px 0 56px}
+.topbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:#9fb3c8;border-bottom:1px solid #1d3a5c;padding-bottom:16px;margin-bottom:40px}
+.label{color:var(--lgold);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+.hero h1{font-size:40px;margin-bottom:14px}
+.hero .out{font-size:20px;color:#d6e1ec;max-width:780px;margin-bottom:22px}
+.hero .out b{color:var(--lgold)}
+.meta{display:flex;flex-wrap:wrap;gap:10px 24px;font-size:14px;color:#9fb3c8;margin-bottom:36px}
+.meta span b{color:#fff;font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kpi{background:var(--card);border-radius:10px;padding:22px}
+.kpi .v{font-size:40px;font-weight:800;color:var(--lgold);line-height:1}
+.kpi .t{font-size:14px;color:#c9d6e3;margin-top:10px}
+.find{background:#fff;border-radius:10px;box-shadow:0 4px 18px rgba(11,31,54,.08);padding:28px;margin-bottom:24px;border-left:6px solid var(--blue)}
+.find.med{border-left-color:var(--gold)}
+.fh{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.fh h3{font-size:20px;max-width:760px}
+.tag{font-size:12px;font-weight:700;padding:4px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
+.tag.high{background:var(--blue);color:#fff}
+.tag.medium{background:var(--gold);color:var(--navy)}
+.site{font-size:13px;color:var(--muted);margin-bottom:12px;word-break:break-all}
+.find p{margin-bottom:14px}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+.cmp div{border-radius:8px;padding:16px;font-size:15px}
+.cmp .bad{background:#fbeceb;border:1px solid #efc6c3}
+.cmp .good{background:#e8f3ec;border:1px solid #bcdcc7}
+.cmp h4{font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.cmp .bad h4{color:var(--red)}.cmp .good h4{color:var(--green)}
+.cmp ul{padding-left:18px}.cmp li{margin-bottom:6px;word-break:break-word}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;margin-top:6px}
+.tbl th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-weight:600}
+.tbl td{padding:10px 12px;border-bottom:1px solid #dfe6ee;vertical-align:top}
+.tbl td.r{color:var(--red);font-weight:600}.tbl td.g{color:var(--green);font-weight:600}
+.tscroll{overflow-x:auto}
+.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:10px;margin-top:8px}
+.flow .col{display:flex;flex-direction:column;gap:8px}
+.flow .box{background:#fbeceb;border:1px solid #efc6c3;border-radius:6px;padding:8px 10px;font-size:13px}
+.flow .box.ok{background:#e8f3ec;border-color:#bcdcc7}
+.flow .mid{background:var(--navy);color:#fff;border-radius:8px;padding:16px;font-size:14px;text-align:center}
+.flow .mid b{color:var(--lgold);display:block;font-size:15px}
+.flow .end{background:#e8f3ec;border:1px solid #bcdcc7;border-radius:8px;padding:16px;font-size:14px;text-align:center}
+.flow .end b{color:var(--green);display:block}
+.arrow{font-size:22px;color:var(--gold);font-weight:700;text-align:center}
+.white{background:#fff}
+.gantt{background:var(--navy);border-radius:12px;padding:26px;margin-bottom:32px;color:#fff}
+.gantt h3{font-size:16px;color:var(--lgold);margin-bottom:16px}
+.grow{display:grid;grid-template-columns:200px 1fr;gap:12px;align-items:center;margin-bottom:10px;font-size:14px}
+.gtrack{position:relative;height:22px;background:#12355b;border-radius:4px}
+.gbar{position:absolute;top:0;height:22px;background:var(--gold);border-radius:4px}
+.gweeks{display:grid;grid-template-columns:200px 1fr;gap:12px;font-size:12px;color:#9fb3c8;margin-bottom:8px}
+.gweeks div:last-child{display:grid;grid-template-columns:repeat(4,1fr)}
+.steps{display:grid;gap:16px}
+.step{display:grid;grid-template-columns:56px 1fr;gap:16px;background:var(--bg);border-radius:10px;padding:22px}
+.step .n{width:48px;height:48px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center}
+.step h3{font-size:18px;margin-bottom:6px}
+.step .why{font-size:14px;color:var(--muted);margin-top:6px}
+.step .why b{color:var(--green)}
+.dark{background:var(--navy);color:#fff}
+.dark .num{color:var(--lgold)}
+.dark .lead{color:#c9d6e3}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rcard{background:var(--card);border-radius:10px;padding:24px}
+.rcard .k{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#9fb3c8;margin-bottom:8px}
+.rcard .big{font-size:38px;font-weight:800;color:var(--lgold);line-height:1.1}
+.rcard .sub{font-size:14px;color:#d6e1ec;margin:6px 0 18px}
+.bar{margin-bottom:12px;font-size:13px;color:#c9d6e3}
+.bar .tr{height:12px;background:#0b1f36;border-radius:3px;margin-top:4px}
+.bar .f{height:12px;background:var(--gold);border-radius:3px}
+.bar .f.dim{background:#5f7690}
+.ngrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ncard{background:#fff;border-top:5px solid var(--gold);border-radius:10px;padding:24px;box-shadow:0 4px 18px rgba(11,31,54,.06)}
+.ncard .s{color:var(--blue);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.ncard h3{font-size:18px;margin-bottom:8px}
+.cta{background:var(--gold);padding:48px 0;text-align:center;color:var(--navy)}
+.cta h2{font-size:30px;margin-bottom:8px}
+.cta p{font-size:18px}
+footer{background:var(--navy);color:#9fb3c8;padding:28px 0;font-size:14px;text-align:center}
+footer b{color:#fff}
+@media (max-width:820px){
+ .kpis,.rgrid,.ngrid{grid-template-columns:1fr}
+ .cmp{grid-template-columns:1fr}
+ .flow{grid-template-columns:1fr}
+ .arrow{transform:rotate(90deg)}
+ .grow,.gweeks{grid-template-columns:110px 1fr}
+ .hero h1{font-size:30px}
+ h2{font-size:24px}
+ section{padding:48px 0}
+}
+@media (max-width:400px){
+ .wrap{padding:0 16px}
+ .step{grid-template-columns:1fr}
+ .grow,.gweeks{grid-template-columns:90px 1fr;font-size:12px}
+ .kpi .v,.rcard .big{font-size:32px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+ <div class="wrap">
+  <div class="topbar"><span>Google Ads audit and management plan</span><span>7 October 2026</span></div>
+  <div class="label">30 day plan prepared for</div>
+  <h1>Water Buffalo</h1>
+  <p class="out">A clean Merchant Center feed and stock-aware Performance Max, so <b>every dollar goes to products that are in stock, approved and profitable</b>, with ROAS reported every week.</p>
+  <div class="meta">
+   <span><b>Store:</b> waterbuffalo.com, Shopify</span>
+   <span><b>Markets:</b> US and Canada</span>
+   <span><b>Scope:</b> Performance Max, Shopping, Merchant Center, GA4</span>
+  </div>
+  <div class="kpis">
+   <div class="kpi"><div class="v">4 of 4</div><div class="t">Road Runner variants carry Amazon ASINs in the barcode field instead of GTINs</div></div>
+   <div class="kpi"><div class="v">2 of 4</div><div class="t">Road Runner colors sold out today, Black and Light Blue</div></div>
+   <div class="kpi"><div class="v">1,275</div><div class="t">Road Runner reviews at 4.7 stars, a strong asset for Shopping ads</div></div>
+  </div>
+ </div>
+</header>
+
+<section>
+ <div class="wrap">
+  <div class="num">01</div>
+  <h2>What we found</h2>
+  <p class="lead">A first pass over the storefront and product data, before any account access. The products and reviews are strong. <span class="hl">The product data Google reads is holding them back.</span></p>
+
+  <div class="find">
+   <div class="fh"><h3>Product identifiers are Amazon ASINs, not GTINs</h3><span class="tag high">High impact</span></div>
+   <div class="site">waterbuffalo.com/products/road-runner-hydration-pack</div>
+   <p>The Shopify barcode field feeds the GTIN attribute in Merchant Center. On the Road Runner, every variant holds an Amazon ASIN. Google cannot match these to a catalog product, which <span class="hl">limits how often Shopping and Performance Max show the listing</span> and can trigger identifier warnings.</p>
+   <div class="tscroll"><table class="tbl">
+    <tr><th>Variant</th><th>Barcode field now</th><th>What Merchant Center expects</th></tr>
+    <tr><td>Black</td><td class="r">B0777J7SQY</td><td class="g">12 or 13 digit UPC / EAN</td></tr>
+    <tr><td>Red</td><td class="r">B07FTQXTP9</td><td class="g">12 or 13 digit UPC / EAN</td></tr>
+    <tr><td>Navy Blue</td><td class="r">B07FTSB748</td><td class="g">12 or 13 digit UPC / EAN</td></tr>
+    <tr><td>Light Blue</td><td class="r">B0777N2TLP</td><td class="g">12 or 13 digit UPC / EAN</td></tr>
+   </table></div>
+  </div>
+
+  <div class="find">
+   <div class="fh"><h3>Titles and URLs are written for Amazon, not for Google Shopping</h3><span class="tag high">High impact</span></div>
+   <div class="site">waterbuffalo.com product pages</div>
+   <p>Product titles are in full capitals, which Google flags as excessive capitalization. Two product URLs are full Amazon titles. Shopping titles need the brand, product type, size and key spec in the first 70 characters, because that is all a shopper sees.</p>
+   <div class="cmp">
+    <div class="bad"><h4>Now</h4><ul>
+     <li>Title: WATER BUFFALO ROAD RUNNER HYDRATION PACK</li>
+     <li>URL: /water-buffalo-hydration-running-vest-quiver-hydration-vest-running-hydration-vest-with-dual-water-bottles-lightweight-water-backpack-for-running-trail-running-marathons</li>
+    </ul></div>
+    <div class="good"><h4>After the fix</h4><ul>
+     <li>Feed title: Water Buffalo Road Runner Hydration Pack 2L, Lightweight Running Backpack, Red</li>
+     <li>URL: /quiver-hydration-running-vest, with a 301 redirect from the old one</li>
+    </ul></div>
+   </div>
+  </div>
+
+  <div class="find med">
+   <div class="fh"><h3>Sold out colours and reviews need to be wired into the campaigns</h3><span class="tag medium">Medium impact</span></div>
+   <div class="site">Shopify inventory, Merchant Center and Performance Max</div>
+   <p>Black and Light Blue are sold out on the Road Runner. Feed availability should update automatically and spend should move to in-stock colors. The 1,275 reviews should flow to Google as product ratings, so the stars show on Shopping ads.</p>
+   <div class="flow">
+    <div class="col">
+     <div class="box">Black: sold out</div>
+     <div class="box">Light Blue: sold out</div>
+     <div class="box ok">Red: in stock</div>
+     <div class="box ok">Navy Blue: in stock</div>
+    </div>
+    <div class="arrow">&rarr;</div>
+    <div class="mid"><b>Feed and listing groups</b>availability synced daily, sold out items excluded, reviews sent as product ratings</div>
+    <div class="arrow">&rarr;</div>
+    <div class="end"><b>Spend on what can sell</b>budget follows in-stock, rated, profitable products</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="white">
+ <div class="wrap">
+  <div class="num">02</div>
+  <h2>The 30 day plan</h2>
+  <p class="lead">Audit first, then clean the feed, then restructure. <span class="hl">Weekly ROAS and spend updates start in week one.</span></p>
+
+  <div class="gantt">
+   <h3>Month 1 timeline</h3>
+   <div class="gweeks"><div></div><div><span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span></div></div>
+   <div class="grow"><span>Account and GA4 audit</span><div class="gtrack"><div class="gbar" style="left:0;width:25%"></div></div></div>
+   <div class="grow"><span>Merchant Center feed</span><div class="gtrack"><div class="gbar" style="left:12%;width:38%"></div></div></div>
+   <div class="grow"><span>PMax and Shopping rebuild</span><div class="gtrack"><div class="gbar" style="left:50%;width:30%"></div></div></div>
+   <div class="grow"><span>Testing and scaling</span><div class="gtrack"><div class="gbar" style="left:75%;width:25%"></div></div></div>
+   <div class="grow"><span>Weekly ROAS report</span><div class="gtrack"><div class="gbar" style="left:0;width:100%"></div></div></div>
+  </div>
+
+  <div class="steps">
+   <div class="step"><div class="n">1</div><div>
+    <h3>Audit the account and check purchase tracking</h3>
+    <p>Confirm GA4 and Google Ads purchase events fire once per order with the correct value, check enhanced conversions, and review the last 90 days of search terms, product performance and wasted spend.</p>
+    <p class="why"><b>Why:</b> ROAS decisions are only as good as the revenue data behind them.</p>
+   </div></div>
+   <div class="step"><div class="n">2</div><div>
+    <h3>Fix identifiers and titles in the feed</h3>
+    <p>Replace ASINs with real UPCs, rewrite titles in title case with brand, type, capacity and colour first, and fill in product type, Google category, colour and size attributes.</p>
+    <p class="why"><b>Why:</b> matched GTINs and clear titles widen the searches each product can show for.</p>
+   </div></div>
+   <div class="step"><div class="n">3</div><div>
+    <h3>Connect reviews and keep stock in sync</h3>
+    <p>Send the existing reviews to Google as product ratings, sync availability daily, and use a supplemental feed to tag sold out and low margin items.</p>
+    <p class="why"><b>Why:</b> stars lift click through rate, and no budget goes to products shoppers cannot buy.</p>
+   </div></div>
+   <div class="step"><div class="n">4</div><div>
+    <h3>Rebuild Performance Max and Shopping by product role</h3>
+    <p>Hero products (Road Runner, Sherpa, Quiver) get their own Performance Max with ROAS targets, accessories and the Bondi beach chair run in Standard Shopping, and brand search is protected separately.</p>
+    <p class="why"><b>Why:</b> each product group gets a budget and target that fits its margin.</p>
+   </div></div>
+   <div class="step"><div class="n">5</div><div>
+    <h3>Report every week</h3>
+    <p>A short weekly update covering spend, revenue, ROAS by campaign and product, what changed and what is next.</p>
+    <p class="why"><b>Why:</b> you always know where every dollar went and what it returned.</p>
+   </div></div>
+  </div>
+ </div>
+</section>
+
+<section class="dark">
+ <div class="wrap">
+  <div class="num">03</div>
+  <h2>Comparable results</h2>
+  <p class="lead">Verified numbers from eCommerce work and live accounts.</p>
+  <div class="rgrid">
+   <div class="rcard">
+    <div class="k">eCommerce Google Ads</div>
+    <div class="big">$15.5M</div>
+    <div class="sub">ad spend managed across 12 years in eCommerce, 977 campaigns in total</div>
+    <div class="bar">$5.6M verified revenue in 2022<div class="tr"><div class="f" style="width:100%"></div></div></div>
+   </div>
+   <div class="rcard">
+    <div class="k">Return on ad spend</div>
+    <div class="big">9.2x</div>
+    <div class="sub">peak ROAS, medical aesthetics, with $20,897 in conversion value generated</div>
+    <div class="bar">7.42x ROAS on a single ad group, $18,973.20 conversion value<div class="tr"><div class="f" style="width:80.6%"></div></div></div>
+    <div class="bar">9.2x peak ROAS<div class="tr"><div class="f" style="width:100%"></div></div></div>
+   </div>
+   <div class="rcard">
+    <div class="k">Performance Max</div>
+    <div class="big">22%</div>
+    <div class="sub">improvement in Performance Max cost per lead on a live UK account in one month</div>
+    <div class="bar">Before: £10.06<div class="tr"><div class="f dim" style="width:100%"></div></div></div>
+    <div class="bar">After: £7.84<div class="tr"><div class="f" style="width:78%"></div></div></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="num">04</div>
+  <h2>What happens next</h2>
+  <p class="lead">Everything stays in your accounts. Access is granted at user level and can be removed at any time.</p>
+  <div class="ngrid">
+   <div class="ncard"><div class="s">Step 1</div><h3>Short call</h3><p>Go through these findings, your target ROAS, margins by product and current monthly spend.</p></div>
+   <div class="ncard"><div class="s">Step 2</div><h3>Access</h3><p>Standard access to Google Ads, Merchant Center and GA4, plus Shopify staff access for product data.</p></div>
+   <div class="ncard"><div class="s">Step 3</div><h3>First week</h3><p>Audit report, the GTIN and title fix list, and your first weekly ROAS and spend update.</p></div>
+  </div>
+ </div>
+</section>
+
+<div class="cta"><div class="wrap"><h2>Let's have a quick call</h2><p>Reply to my message with a time that suits you.</p></div></div>
+
+<footer><div class="wrap"><b>Usman Gull</b>, Google Ads and SEO Specialist</div></footer>
+
+</body>
+</html>
